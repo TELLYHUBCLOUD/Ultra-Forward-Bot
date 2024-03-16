@@ -222,13 +222,13 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('🔙 Back', 
                       callback_data="settings#main")])
      await query.message.edit_text(
-        "<b><u>Custom Button</b></u>\n\nYou Can Set A Inline Button To Messages.\n\n<b><u>Format :</b></u>\n`[Madflix Botz][buttonurl:https://t.me/Madflix_Bots]`\n",
+        "<b><u>Custom Button</b></u>\n\nYou Can Set A Inline Button To Messages.\n\n<b><u>Format :</b></u>\n`[Tellycloud Bots][buttonurl:https://t.me/tellycloud_Bots]`\n",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="addbutton":
      await query.message.delete()
      try:
-         txt = await bot.send_message(user_id, text="**Send your custom button.\n\nFORMAT:**\n`[forward bot][buttonurl:https://t.me/KR_Forward_Bot]`\n")
+         txt = await bot.send_message(user_id, text="**Send your custom button.\n\nFORMAT:**\n`[Forward bot][buttonurl:https://t.me/TC_ForwardBot]`\n")
          ask = await bot.listen(chat_id=user_id, timeout=300)
          button = parse_buttons(ask.text.html)
          if not button:
